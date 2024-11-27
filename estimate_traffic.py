@@ -14,14 +14,11 @@ def detect_delimiter(line):
         return None
 
 def estimate_traffic(alexa_rank):
-    # Regression model coefficients
-    m = -1.2336
-    b = 4.873
-    x = math.log10(alexa_rank)
-    y = m * x + b
-    traffic_million = 10 ** y  # Traffic in millions
-    traffic = traffic_million * 1_000_000  # Traffic in units
-    return max(0, int(traffic // 1000 * 1000))  # Round down to nearest 1000
+    # Power model coefficients
+    if alexa_rank <= 0:
+        return 0
+    traffic = 7.881e10 / (alexa_rank ** 1.257) * 10
+    return int(traffic)
 
 def process_file(input_file, output_file):
     with open(input_file, 'r') as infile:

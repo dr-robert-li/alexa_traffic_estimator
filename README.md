@@ -8,7 +8,7 @@ A Python script that estimates website traffic based on Alexa Rank using a regre
 
 • Automatically detects delimiters (tab, comma, or space)
 
-• Estimates traffic using a logarithmic regression model
+• Estimates traffic using a power law model
 
 • Outputs results in the same format as input with traffic estimates
 
