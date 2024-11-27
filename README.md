@@ -22,11 +22,14 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run the script with input and output file parameters:
+Run the script with input file parameter (output file is optional):
 
 ```bash
-python estimate_traffic.py input_file.txt output_file.txt
+python estimate_traffic.py input_file.txt
+python estimate_traffic.py input_file.txt output_file.csv
 ```
+
+When no output file is specified, results are saved to output_file.csv
 
 ### Input File Format
 
