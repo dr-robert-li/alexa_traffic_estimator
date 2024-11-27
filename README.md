@@ -60,8 +60,6 @@ The output file will contain three columns:
 
 ## Notes
 
-• Traffic estimates are rounded down to the nearest 1000
-
 • Invalid entries are skipped and reported during processing
 
 • Supports CSV, TXT, or any text file with consistent delimiters
