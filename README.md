@@ -31,27 +31,38 @@ python estimate_traffic.py input_file.txt output_file.txt
 ### Input File Format
 
 The input file should contain two columns:
+
 • Website URL
+
 • Alexa Rank
 
-Example:
-```
+For CSV files, use these headers:
+```csv
+url,alexa_rank
 example.com,1000
-sample.org,5000
+google.com,1
 ```
+
+The script supports text files with any delimiter (comma, tab, or space).
 
 ### Output Format
 
 The output file will contain three columns:
+
 • Website URL
+
 • Alexa Rank
+
 • Estimated Traffic
 
 ## Notes
 
 • Traffic estimates are rounded down to the nearest 1000
+
 • Invalid entries are skipped and reported during processing
+
 • Supports CSV, TXT, or any text file with consistent delimiters
+
 
 ## 🤝 Contributing
 
